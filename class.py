@@ -7,3 +7,4 @@
 #         hash_map[element] = 1
 # print(hash_map)
 
+#tested
