@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tables-HTML</title>
+    <style>
+      /* Global Reset and Body Styling */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      h1 {
+        color: white;
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        font-weight: 300;
+        letter-spacing: 2px;
+      }
+
+      /* Table Container - Adds shadow and rounded corners */
+      table {
+        width: 80%;
+        max-width: 800px;
+        border-collapse: separate;
+        border-spacing: 0;
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease;
+      }
+
+      table:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4);
+      }
+
+      /* Table Header Styling */
+      thead {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+
+      thead th {
+        color: white;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 0.9rem;
+        padding: 18px 20px;
+        text-align: left;
+        border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+      }
+
+      /* Table Body Styling */
+      tbody tr {
+        transition: all 0.3s ease;
+        border-bottom: 1px solid #eef2f7;
+      }
+
+      tbody tr:last-child {
+        border-bottom: none;
+      }
+
+      /* Hover effect for rows */
+      tbody tr:hover {
+        background-color: #f8f9ff;
+        transform: scale(1.01);
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.15);
+      }
+
+      /* Alternating row colors */
+      tbody tr:nth-child(even) {
+        background-color: #f8faff;
+      }
+
+      tbody tr:nth-child(even):hover {
+        background-color: #f0f3ff;
+      }
+
+      /* Table Data Cell Styling */
+      tbody td {
+        padding: 15px 20px;
+        color: #2d3748;
+        font-size: 1rem;
+        border-right: 1px solid #edf2f7;
+      }
+
+      tbody td:last-child {
+        border-right: none;
+      }
+
+      /* Specific column styling */
+      tbody td:first-child {
+        font-weight: 600;
+        color: #4a5568;
+      }
+
+      tbody td:nth-child(2) {
+        color: #4a5568;
+      }
+
+      tbody td:last-child {
+        font-weight: 600;
+        color: #48bb78;
+      }
+
+      /* Optional: Add icons to roles */
+      tbody td:nth-child(2)::before {
+        content: "💼 ";
+        font-size: 0.9rem;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        table {
+          width: 95%;
+          font-size: 0.85rem;
+        }
+
+        thead th,
+        tbody td {
+          padding: 12px 15px;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        table {
+          width: 100%;
+          font-size: 0.75rem;
+        }
+
+        thead th,
+        tbody td {
+          padding: 10px 12px;
+        }
+
+        h1 {
+          font-size: 1.5rem;
+        }
+
+        /* Stack table on mobile if needed */
+        table {
+          display: block;
+          overflow-x: auto;
+          white-space: nowrap;
+        }
+      }
+
+      /* Print-friendly styles */
+      @media print {
+        body {
+          background: white;
+          padding: 20px;
+        }
+
+        h1 {
+          color: #333;
+          text-shadow: none;
+        }
+
+        table {
+          box-shadow: none;
+          border: 1px solid #ddd;
+        }
+
+        tbody tr:hover {
+          background-color: transparent;
+          transform: none;
+        }
+
+        thead {
+          background: #333 !important;
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+      }
+
+      /* Animation for table appearance */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      table {
+        animation: fadeInUp 0.6s ease-out;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Tables in HTML</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Role</th>
+          <th>Salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Harry</td>
+          <td>Software Developer</td>
+          <td>$70,000</td>
+        </tr>
+        <tr>
+          <td>Rohan</td>
+          <td>Software Helper</td>
+          <td>$700</td>
+        </tr>
+        <tr>
+          <td>Shivam</td>
+          <td>ML Engineer</td>
+          <td>$200</td>
+        </tr>
+        <tr>
+          <td>Ram</td>
+          <td>AI Engineer</td>
+          <td>$20,000</td>
+        </tr>
+        <tr>
+         
+          <td colspan="3">Thank You</td>
+         
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
