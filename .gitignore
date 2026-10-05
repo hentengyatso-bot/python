@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.pyc
+
+# Exclude practice files (only submitting the scraper)
+assignment quiz.py
+assignment.py
+calculator.py
+class.py
+ds.py
+fileio.py
+numbers.txt
+oops.py
+problem3.html
+student.py
+package/
+src/
